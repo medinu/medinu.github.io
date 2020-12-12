@@ -1,0 +1,8 @@
+# all installed packages
+node_modules
+
+#final product
+dist
+
+#cache
+.cache
