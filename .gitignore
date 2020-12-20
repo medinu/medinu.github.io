@@ -2,7 +2,7 @@
 node_modules
 
 #final product
-dist
+#dist
 
 #cache
 .cache
