@@ -1,5 +1,27 @@
-*{
-    color: blue;
+.about{
+    min-height: 300px;
+    background-color: rgb(60, 60, 60);
+}
+
+.projects{
+    min-height: 300px;
+    background-color: white;
+}
+
+.skillsAndExperience{
+    min-height: 300px;
+    background-color: rgb(122, 122, 122);
+}
+
+.education{
+    min-height: 300px;
+    background-color: silver;
+}
+
+
+.contact{
+    min-height: 300px;
+    background-color: whitesmoke;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

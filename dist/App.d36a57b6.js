@@ -29696,7 +29696,7 @@ function Nav(props) {
   }, "Project3"))), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#Education",
+    href: "#education",
     className: "nav-link"
   }, "Education")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
@@ -29706,14 +29706,49 @@ function Nav(props) {
   }, "Skills & Experience")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#Contact",
+    href: "contact",
     className: "nav-link"
   }, "Contact")))));
 }
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Components/Body.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function BodyComp(props) {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "bodyComp text-center"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    id: "about",
+    className: "about"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "About")), /*#__PURE__*/_react.default.createElement("div", {
+    id: "projects",
+    className: "projects"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Projects")), /*#__PURE__*/_react.default.createElement("div", {
+    id: "skillsAndExperience",
+    className: "skillsAndExperience"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Skills & Experience")), /*#__PURE__*/_react.default.createElement("div", {
+    id: "education",
+    className: "education"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Education")), /*#__PURE__*/_react.default.createElement("div", {
+    id: "contact",
+    className: "contact"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Say hello!")));
+}
+
+var _default = BodyComp;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29721,6 +29756,8 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _Nav = _interopRequireDefault(require("./Components/Nav"));
+
+var _Body = _interopRequireDefault(require("./Components/Body"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29760,7 +29797,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Nav.default, null), /*#__PURE__*/_react.default.createElement("h1", null, "Dinesh Pandey"));
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Nav.default, null), /*#__PURE__*/_react.default.createElement(_Body.default, null));
     }
   }]);
 
@@ -29768,7 +29805,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/Nav":"Components/Nav.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/Nav":"Components/Nav.js","./Components/Body":"Components/Body.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29796,7 +29833,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49169" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
