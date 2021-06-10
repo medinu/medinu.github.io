@@ -29679,24 +29679,23 @@ function Nav(props) {
   }, "About Me")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item dropdown"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#projects",
     className: "nav-link dropdown-toggle",
     "data-toggle": "dropdown"
   }, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
     className: "dropdown-menu"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#project1",
+    href: "#projects",
     className: "dropdown-item"
   }, "Project1"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#project2",
+    href: "#projects",
     className: "dropdown-item"
   }, "Project2"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#project3",
+    href: "#projects",
     className: "dropdown-item"
   }, "Project3"))), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#education",
+    href: "#Education",
     className: "nav-link"
   }, "Education")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
@@ -29706,7 +29705,7 @@ function Nav(props) {
   }, "Skills & Experience")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "contact",
+    href: "#Contact",
     className: "nav-link"
   }, "Contact")))));
 }
@@ -29833,7 +29832,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49657" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50172" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

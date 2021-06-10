@@ -20,16 +20,16 @@ function Nav(props){
                     </li>
 
                     <li className="nav-item dropdown">
-                        <a href="#projects" className="nav-link dropdown-toggle" data-toggle="dropdown">Projects</a>
+                        <a className="nav-link dropdown-toggle" data-toggle="dropdown">Projects</a>
                         <div className="dropdown-menu">
-                            <a href="#project1" className="dropdown-item">Project1</a>
-                            <a href="#project2" className="dropdown-item">Project2</a>
-                            <a href="#project3" className="dropdown-item">Project3</a>
+                            <a href="#projects" className="dropdown-item">Project1</a>
+                            <a href="#projects" className="dropdown-item">Project2</a>
+                            <a href="#projects" className="dropdown-item">Project3</a>
                         </div>
                     </li>
 
                     <li className="nav-item">
-                        <a href="#education" className="nav-link">Education</a>
+                        <a href="#Education" className="nav-link">Education</a>
                     </li>
 
                     <li className="nav-item">
@@ -37,7 +37,7 @@ function Nav(props){
                     </li>
                     
                     <li className="nav-item">
-                        <a href="contact" className="nav-link">Contact</a>
+                        <a href="#Contact" className="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
