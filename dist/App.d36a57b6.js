@@ -29712,7 +29712,9 @@ function Nav(props) {
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Components/Body.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Assets/arrow-up.svg":[function(require,module,exports) {
+module.exports = "/arrow-up.11cefa54.svg";
+},{}],"Components/Body.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29724,13 +29726,73 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var UpArrow = require('../Assets/arrow-up.svg');
+
 function BodyComp(props) {
+  var UpArrowStyle = {
+    backgroundColor: "rgba(122, 122, 122, 0.25)",
+    position: "fixed",
+    bottom: "25px",
+    right: "25px",
+    width: "50px",
+    height: "50px",
+    borderRadius: "50%",
+    display: "inline-block",
+    alignItems: "center",
+    opacity: "0"
+  };
+  var ArrowImgStyle = {
+    height: "50px",
+    width: "50px",
+    position: "relative",
+    margin: "auto",
+    right: "1px"
+  };
+  var showBtn = {
+    opacity: "1",
+    transform: "translateY(0)"
+  };
+
+  var scrollToTopLogic = function scrollToTopLogic() {
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  function handleScroll() {
+    var rootElement = document.documentElement;
+    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+
+    if (rootElement.scrollTop / scrollTotal > 0.2) {
+      // Show button
+      document.getElementById("scrollToTop").style.opacity = 1;
+      document.getElementById("scrollToTop").style.transform = "translateY(0)";
+    } else {
+      // Hide button
+      document.getElementById("scrollToTop").style.opacity = 0;
+      document.getElementById("scrollToTop").style.transform = "translateY(0)";
+    }
+  }
+
+  document.addEventListener("scroll", handleScroll);
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "bodyComp text-center"
+    className: "bodyComp"
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "about",
-    className: "about"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "About")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "about d-flex p-3"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "abtCont container-sm p-5 bg-light text-center"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "p-2",
+    style: {
+      borderRadius: "50%"
+    },
+    src: "https://media-exp3.licdn.com/dms/image/C5635AQHzb19KWtChXg/profile-framedphoto-shrink_200_200/0/1614812140597?e=1623528000&v=beta&t=Fulz2hFDX1fhNIR20lJUztLU-2FuDvXejtdx8A7iDtQ",
+    alt: "My face"
+  }), /*#__PURE__*/_react.default.createElement("h1", {
+    className: "border-bottom border-top border-dark p-2"
+  }, "Hello, My name is Dinesh Pandey"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Aspiring Web/Mobile/Software Developer with foundational knowledge pertaining to Software Engineering. Experienced in C++, Java, JavaScript, Python. "), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, "The only way to do great work is to love what you do. If you haven\u2019t found it yet, keep looking. Don\u2019t settle."), "\u2013 Steve Jobs"))), /*#__PURE__*/_react.default.createElement("div", {
     id: "projects",
     className: "projects"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Projects")), /*#__PURE__*/_react.default.createElement("div", {
@@ -29742,12 +29804,19 @@ function BodyComp(props) {
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Education")), /*#__PURE__*/_react.default.createElement("div", {
     id: "contact",
     className: "contact"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Say hello!")));
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Say hello!")), /*#__PURE__*/_react.default.createElement("a", {
+    id: "scrollToTop",
+    style: UpArrowStyle,
+    onClick: scrollToTopLogic
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    style: ArrowImgStyle,
+    src: UpArrow
+  })));
 }
 
 var _default = BodyComp;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29832,7 +29901,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50172" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56931" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
