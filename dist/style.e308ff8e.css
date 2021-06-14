@@ -1,26 +1,23 @@
 .about{
-    min-height: 300px;
     background-color: rgb(60, 60, 60);
 }
 
 .projects{
-    min-height: 300px;
     background-color: white;
 }
 
 .skillsAndExperience{
-    min-height: 300px;
     background-color: rgb(122, 122, 122);
 }
 
 .education{
-    min-height: 300px;
+    min-height: 200px;
     background-color: silver;
 }
 
 
 .contact{
-    min-height: 300px;
+    min-height: 200px;
     background-color: whitesmoke;
 }
 

@@ -29712,17 +29712,141 @@ function Nav(props) {
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Assets/arrow-up.svg":[function(require,module,exports) {
-module.exports = "/arrow-up.11cefa54.svg";
-},{}],"Assets/gradPic.jpg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Assets/gradPic.jpg":[function(require,module,exports) {
 module.exports = "/gradPic.7bc4d45c.jpg";
-},{}],"Components/Body.js":[function(require,module,exports) {
+},{}],"Components/About.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = About;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var gradPic = require('../Assets/gradPic.jpg');
+
+function About() {
+  var imgStyle = {
+    borderRadius: "50%",
+    boxShadow: "0px 0px 3px",
+    height: "300px",
+    width: "300px"
+  };
+  var abtContainer = {
+    borderRadius: "5px"
+  };
+  return /*#__PURE__*/_react.default.createElement("div", {
+    id: "about",
+    className: "about d-flex p-3"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "abtCont container-sm p-5 bg-light text-center ",
+    style: abtContainer
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "container p-2 m-2",
+    style: imgStyle,
+    src: gradPic,
+    alt: "My face"
+  }), /*#__PURE__*/_react.default.createElement("h1", {
+    className: "border-bottom border-top border-dark p-2"
+  }, "Hello, My name is Dinesh Pandey"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Aspiring Web/Mobile/Software Developer with foundational knowledge pertaining to Software Engineering. Experienced in C++, Java, JavaScript, Python. "), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, "The only way to do great work is to love what you do. If you haven\u2019t found it yet, keep looking. Don\u2019t settle."), "\u2013 Steve Jobs")));
+}
+},{"react":"node_modules/react/index.js","../Assets/gradPic.jpg":"Assets/gradPic.jpg"}],"Assets/currProjects.json":[function(require,module,exports) {
+module.exports = [{
+  "title": "PIONEERHUB",
+  "description": "PioneerHub is a social platform that connects the CSUEB community together. PioneerHub is your go-to forreaching out to not only your classmates but also your department peers. Features include feed that displaysstudent post, a hub that gathers different resouces on campus on one screen, displaying and editing usersprofile, and a simple map that drops down locations of the buildings on campus.",
+  "link": "https://github.com/PioneerBois/PioneerHub",
+  "stack": ["ANDROID STUDIO", "JAVA", "FIGMA", "BACK4APP(DATABASE)", "GITHUB PROJECTS", "AGILE"]
+}, {
+  "title": "DBALL.IO",
+  "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to servewebpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
+  "link": "https://github.com/medinu/express_/tree/master/views",
+  "stack": ["EXPRESSJS", "BOOTSTRAP", "JAVASCRIPT", "MONGODB", "BCRYPTJS", "HTML, CSS & JAVASCRIPT"]
+}, {
+  "title": "CLONESTAGRAM",
+  "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend.",
+  "link": "https://github.com/medinu/clonestagram",
+  "stack": ["JAVA", "ANDROID STUDIO", "BACK4APP (DATABASE)"]
+}];
+},{}],"Components/Projects.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Projects;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _currProjects = _interopRequireDefault(require("../Assets/currProjects.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Projects() {
+  var projContainer = {
+    backgroundColor: "rgb(165, 165, 165)",
+    borderRadius: "5px"
+  };
+
+  var proj = _currProjects.default.map(function (project, index) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: project + index,
+      className: "project-card col-sm"
+    }, /*#__PURE__*/_react.default.createElement("h1", null, project.title), /*#__PURE__*/_react.default.createElement("p", null, project.description), /*#__PURE__*/_react.default.createElement("a", {
+      href: project.link
+    }, "Project Source"));
+  });
+
+  console.log(_currProjects.default);
+  console.log(proj);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    id: "projects",
+    className: "projects p-3 text-center"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container container-sm p-5 text-center",
+    style: projContainer
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "row"
+  }, proj)));
+}
+},{"react":"node_modules/react/index.js","../Assets/currProjects.json":"Assets/currProjects.json"}],"Components/Experience.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Experience;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Experience() {
+  var expContainer = {
+    backgroundColor: "rgb(165, 165, 165)",
+    borderRadius: "5px"
+  };
+  return /*#__PURE__*/_react.default.createElement("div", {
+    id: "skillsAndExperience",
+    className: "skillsAndExperience p-3 text-center"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "container container-sm p-5 text-center bg-light",
+    style: expContainer
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "row"
+  }, "Experience")));
+}
+},{"react":"node_modules/react/index.js"}],"Assets/arrow-up.svg":[function(require,module,exports) {
+module.exports = "/arrow-up.11cefa54.svg";
+},{}],"Components/ScrollToTopBtn.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ScrollToTopBtn;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29730,9 +29854,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var UpArrow = require('../Assets/arrow-up.svg');
 
-var gradPic = require('../Assets/gradPic.jpg');
-
-function BodyComp(props) {
+function ScrollToTopBtn() {
   var UpArrowStyle = {
     backgroundColor: "rgba(122, 122, 122, 0.25)",
     position: "fixed",
@@ -29751,14 +29873,6 @@ function BodyComp(props) {
     position: "relative",
     margin: "auto",
     right: "1px"
-  };
-  var imgStyle = {
-    borderRadius: "50%",
-    boxShadow: "0px 0px 3px"
-  };
-  var showBtn = {
-    opacity: "1",
-    transform: "translateY(0)"
   };
 
   var scrollToTopLogic = function scrollToTopLogic() {
@@ -29784,45 +29898,50 @@ function BodyComp(props) {
   }
 
   document.addEventListener("scroll", handleScroll);
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "bodyComp"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    id: "about",
-    className: "about d-flex p-3"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "abtCont container-sm p-5 bg-light text-center "
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "container p-2 m-2",
-    style: imgStyle,
-    src: gradPic,
-    alt: "My face"
-  }), /*#__PURE__*/_react.default.createElement("h1", {
-    className: "border-bottom border-top border-dark p-2"
-  }, "Hello, My name is Dinesh Pandey"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Aspiring Web/Mobile/Software Developer with foundational knowledge pertaining to Software Engineering. Experienced in C++, Java, JavaScript, Python. "), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, "The only way to do great work is to love what you do. If you haven\u2019t found it yet, keep looking. Don\u2019t settle."), "\u2013 Steve Jobs"))), /*#__PURE__*/_react.default.createElement("div", {
-    id: "projects",
-    className: "projects"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Projects")), /*#__PURE__*/_react.default.createElement("div", {
-    id: "skillsAndExperience",
-    className: "skillsAndExperience"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Skills & Experience")), /*#__PURE__*/_react.default.createElement("div", {
-    id: "education",
-    className: "education"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Education")), /*#__PURE__*/_react.default.createElement("div", {
-    id: "contact",
-    className: "contact"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Say hello!")), /*#__PURE__*/_react.default.createElement("a", {
+  return /*#__PURE__*/_react.default.createElement("a", {
     id: "scrollToTop",
     style: UpArrowStyle,
     onClick: scrollToTopLogic
   }, /*#__PURE__*/_react.default.createElement("img", {
     style: ArrowImgStyle,
     src: UpArrow
-  })));
+  }));
+}
+},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg"}],"Components/Body.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _About = _interopRequireDefault(require("./About"));
+
+var _Projects = _interopRequireDefault(require("./Projects"));
+
+var _Experience = _interopRequireDefault(require("./Experience"));
+
+var _ScrollToTopBtn = _interopRequireDefault(require("./ScrollToTopBtn"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function BodyComp(props) {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "bodyComp"
+  }, /*#__PURE__*/_react.default.createElement(_About.default, null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement(_Experience.default, null), /*#__PURE__*/_react.default.createElement("div", {
+    id: "education",
+    className: "education"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Education")), /*#__PURE__*/_react.default.createElement("div", {
+    id: "contact",
+    className: "contact"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Say hello!")), /*#__PURE__*/_react.default.createElement(_ScrollToTopBtn.default, null));
 }
 
 var _default = BodyComp;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg","../Assets/gradPic.jpg":"Assets/gradPic.jpg"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./About":"Components/About.jsx","./Projects":"Components/Projects.jsx","./Experience":"Components/Experience.jsx","./ScrollToTopBtn":"Components/ScrollToTopBtn.jsx"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29907,7 +30026,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50960" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51487" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
