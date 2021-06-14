@@ -29682,7 +29682,7 @@ function Nav(props) {
     className: "nav-link dropdown-toggle",
     "data-toggle": "dropdown"
   }, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "dropdown-menu"
+    className: "dropdown-menu display"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "#projects",
     className: "dropdown-item"
@@ -29714,6 +29714,8 @@ var _default = Nav;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Assets/arrow-up.svg":[function(require,module,exports) {
 module.exports = "/arrow-up.11cefa54.svg";
+},{}],"Assets/gradPic.jpg":[function(require,module,exports) {
+module.exports = "/gradPic.7bc4d45c.jpg";
 },{}],"Components/Body.js":[function(require,module,exports) {
 "use strict";
 
@@ -29727,6 +29729,8 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var UpArrow = require('../Assets/arrow-up.svg');
+
+var gradPic = require('../Assets/gradPic.jpg');
 
 function BodyComp(props) {
   var UpArrowStyle = {
@@ -29747,6 +29751,10 @@ function BodyComp(props) {
     position: "relative",
     margin: "auto",
     right: "1px"
+  };
+  var imgStyle = {
+    borderRadius: "50%",
+    boxShadow: "0px 0px 3px"
   };
   var showBtn = {
     opacity: "1",
@@ -29782,13 +29790,11 @@ function BodyComp(props) {
     id: "about",
     className: "about d-flex p-3"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "abtCont container-sm p-5 bg-light text-center"
+    className: "abtCont container-sm p-5 bg-light text-center "
   }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "p-2",
-    style: {
-      borderRadius: "50%"
-    },
-    src: "https://media-exp3.licdn.com/dms/image/C5635AQHzb19KWtChXg/profile-framedphoto-shrink_200_200/0/1614812140597?e=1623528000&v=beta&t=Fulz2hFDX1fhNIR20lJUztLU-2FuDvXejtdx8A7iDtQ",
+    className: "container p-2 m-2",
+    style: imgStyle,
+    src: gradPic,
     alt: "My face"
   }), /*#__PURE__*/_react.default.createElement("h1", {
     className: "border-bottom border-top border-dark p-2"
@@ -29816,7 +29822,7 @@ function BodyComp(props) {
 
 var _default = BodyComp;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg","../Assets/gradPic.jpg":"Assets/gradPic.jpg"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29901,7 +29907,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56931" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50960" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

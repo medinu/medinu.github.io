@@ -21,7 +21,7 @@ function Nav(props){
 
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-toggle="dropdown">Projects</a>
-                        <div className="dropdown-menu">
+                        <div className="dropdown-menu display">
                             <a href="#projects" className="dropdown-item">Project1</a>
                             <a href="#projects" className="dropdown-item">Project2</a>
                             <a href="#projects" className="dropdown-item">Project3</a>
