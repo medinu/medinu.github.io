@@ -29639,7 +29639,24 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"Components/Nav.js":[function(require,module,exports) {
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"Assets/currProjects.json":[function(require,module,exports) {
+module.exports = [{
+  "title": "PIONEERHUB",
+  "description": "PioneerHub is a social platform that connects the CSUEB community together. PioneerHub is your go-to forreaching out to not only your classmates but also your department peers. Features include feed that displaysstudent post, a hub that gathers different resouces on campus on one screen, displaying and editing usersprofile, and a simple map that drops down locations of the buildings on campus.",
+  "link": "https://github.com/PioneerBois/PioneerHub",
+  "stack": ["ANDROID STUDIO", "JAVA", "FIGMA", "BACK4APP(DATABASE)", "GITHUB PROJECTS", "AGILE"]
+}, {
+  "title": "DBALL.IO",
+  "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to servewebpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
+  "link": "https://github.com/medinu/express_",
+  "stack": ["EXPRESSJS", "BOOTSTRAP", "JAVASCRIPT", "MONGODB", "BCRYPTJS", "HTML, CSS & JAVASCRIPT"]
+}, {
+  "title": "CLONESTAGRAM",
+  "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend.",
+  "link": "https://github.com/medinu/clonestagram",
+  "stack": ["JAVA", "ANDROID STUDIO", "BACK4APP (DATABASE)"]
+}];
+},{}],"Components/Nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29651,9 +29668,19 @@ var _react = _interopRequireDefault(require("react"));
 
 require("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
+var _currProjects = _interopRequireDefault(require("../Assets/currProjects.json"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Nav(props) {
+  var projs = _currProjects.default.map(function (project, idx) {
+    return /*#__PURE__*/_react.default.createElement("a", {
+      key: project + idx,
+      href: "#" + project.title,
+      className: "dropdown-item"
+    }, project.title);
+  });
+
   return /*#__PURE__*/_react.default.createElement("nav", {
     className: "navbar navbar-expand-sm bg-dark navbar-dark"
   }, /*#__PURE__*/_react.default.createElement("a", {
@@ -29683,21 +29710,7 @@ function Nav(props) {
     "data-toggle": "dropdown"
   }, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
     className: "dropdown-menu display"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#projects",
-    className: "dropdown-item"
-  }, "Project1"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#projects",
-    className: "dropdown-item"
-  }, "Project2"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#projects",
-    className: "dropdown-item"
-  }, "Project3"))), /*#__PURE__*/_react.default.createElement("li", {
-    className: "nav-item"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#Education",
-    className: "nav-link"
-  }, "Education")), /*#__PURE__*/_react.default.createElement("li", {
+  }, projs)), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "#skillsAndExperience",
@@ -29705,15 +29718,17 @@ function Nav(props) {
   }, "Skills & Experience")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#Contact",
+    href: "#contact",
     className: "nav-link"
   }, "Contact")))));
 }
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"Assets/gradPic.jpg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","../Assets/currProjects.json":"Assets/currProjects.json"}],"Assets/gradPic.jpg":[function(require,module,exports) {
 module.exports = "/gradPic.7bc4d45c.jpg";
+},{}],"Assets/iconGradCap.svg":[function(require,module,exports) {
+module.exports = "/iconGradCap.f1c2a75d.svg";
 },{}],"Components/About.jsx":[function(require,module,exports) {
 "use strict";
 
@@ -29728,48 +29743,46 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var gradPic = require('../Assets/gradPic.jpg');
 
+var gradCap = require('../Assets/iconGradCap.svg');
+
 function About() {
   var imgStyle = {
     borderRadius: "50%",
     boxShadow: "0px 0px 3px",
-    height: "300px",
-    width: "300px"
+    height: "250px",
+    width: "250px"
   };
   var abtContainer = {
     borderRadius: "5px"
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "about",
-    className: "about d-flex p-3"
+    className: "about p-3"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "abtCont container-sm p-5 bg-light text-center ",
+    className: "abtCont container-sm p-5 bg-light text-center",
     style: abtContainer
   }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "container p-2 m-2",
+    className: "container p-0 mb-3",
     style: imgStyle,
     src: gradPic,
     alt: "My face"
   }), /*#__PURE__*/_react.default.createElement("h1", {
-    className: "border-bottom border-top border-dark p-2"
-  }, "Hello, My name is Dinesh Pandey"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Aspiring Web/Mobile/Software Developer with foundational knowledge pertaining to Software Engineering. Experienced in C++, Java, JavaScript, Python. "), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, "The only way to do great work is to love what you do. If you haven\u2019t found it yet, keep looking. Don\u2019t settle."), "\u2013 Steve Jobs")));
+    className: "border-bottom border-top border-dark p-2 animate__animated animate__bounce"
+  }, "Hello, My name is Dinesh Pandey"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("img", {
+    src: gradCap,
+    alt: "Alma matter"
+  }), /*#__PURE__*/_react.default.createElement("h5", null, "CALIFORNIA STATE UNIVERSITY EAST BAY", /*#__PURE__*/_react.default.createElement("span", {
+    className: "h6"
+  }, /*#__PURE__*/_react.default.createElement("br", null), "Hayward, CA")), /*#__PURE__*/_react.default.createElement("p", {
+    className: "pb-3"
+  }, "BS COMPUTER SCIENCE ", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("span", null, "Aug 2019 \u2013 May 2021")), /*#__PURE__*/_react.default.createElement("p", null, "Aspiring Web/Mobile/Software Developer with foundational knowledge pertaining to Software Engineering. Experienced in C++, Java, JavaScript, Python. "), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, "The only way to do great work is to love what you do. If you haven\u2019t found it yet, keep looking. Don\u2019t settle."), "\u2013 Steve Jobs")));
 }
-},{"react":"node_modules/react/index.js","../Assets/gradPic.jpg":"Assets/gradPic.jpg"}],"Assets/currProjects.json":[function(require,module,exports) {
-module.exports = [{
-  "title": "PIONEERHUB",
-  "description": "PioneerHub is a social platform that connects the CSUEB community together. PioneerHub is your go-to forreaching out to not only your classmates but also your department peers. Features include feed that displaysstudent post, a hub that gathers different resouces on campus on one screen, displaying and editing usersprofile, and a simple map that drops down locations of the buildings on campus.",
-  "link": "https://github.com/PioneerBois/PioneerHub",
-  "stack": ["ANDROID STUDIO", "JAVA", "FIGMA", "BACK4APP(DATABASE)", "GITHUB PROJECTS", "AGILE"]
-}, {
-  "title": "DBALL.IO",
-  "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to servewebpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
-  "link": "https://github.com/medinu/express_/tree/master/views",
-  "stack": ["EXPRESSJS", "BOOTSTRAP", "JAVASCRIPT", "MONGODB", "BCRYPTJS", "HTML, CSS & JAVASCRIPT"]
-}, {
-  "title": "CLONESTAGRAM",
-  "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend.",
-  "link": "https://github.com/medinu/clonestagram",
-  "stack": ["JAVA", "ANDROID STUDIO", "BACK4APP (DATABASE)"]
-}];
+},{"react":"node_modules/react/index.js","../Assets/gradPic.jpg":"Assets/gradPic.jpg","../Assets/iconGradCap.svg":"Assets/iconGradCap.svg"}],"Assets/projectBanner/PIONEERHUB.PNG":[function(require,module,exports) {
+module.exports = "/PIONEERHUB.c415f121.PNG";
+},{}],"Assets/projectBanner/DBALLIO.PNG":[function(require,module,exports) {
+module.exports = "/DBALLIO.51a0a83e.PNG";
+},{}],"Assets/projectBanner/CLONESTAGRAM.PNG":[function(require,module,exports) {
+module.exports = "/CLONESTAGRAM.16845140.PNG";
 },{}],"Components/Projects.jsx":[function(require,module,exports) {
 "use strict";
 
@@ -29782,6 +29795,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _currProjects = _interopRequireDefault(require("../Assets/currProjects.json"));
 
+var _PIONEERHUB = _interopRequireDefault(require("../Assets/projectBanner/PIONEERHUB.PNG"));
+
+var _DBALLIO = _interopRequireDefault(require("../Assets/projectBanner/DBALLIO.PNG"));
+
+var _CLONESTAGRAM = _interopRequireDefault(require("../Assets/projectBanner/CLONESTAGRAM.PNG"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Projects() {
@@ -29789,12 +29808,47 @@ function Projects() {
     backgroundColor: "rgb(165, 165, 165)",
     borderRadius: "5px"
   };
+  var projectCardStyle = {
+    backgroundColor: "ivory",
+    borderRadius: "5px"
+  };
+  var imgStyle = {
+    height: "200px",
+    width: "250px"
+  };
+
+  function projectPicture(title) {
+    switch (title) {
+      case "PIONEERHUB":
+        return _PIONEERHUB.default;
+        break;
+
+      case "DBALL.IO":
+        return _DBALLIO.default;
+        break;
+
+      case "CLONESTAGRAM":
+        return _CLONESTAGRAM.default;
+
+      default:
+        break;
+    }
+  }
 
   var proj = _currProjects.default.map(function (project, index) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: project + index,
-      className: "project-card col-sm"
-    }, /*#__PURE__*/_react.default.createElement("h1", null, project.title), /*#__PURE__*/_react.default.createElement("p", null, project.description), /*#__PURE__*/_react.default.createElement("a", {
+      id: project.title,
+      className: "col-md p-5 mb-3 text-center",
+      style: projectCardStyle
+    }, /*#__PURE__*/_react.default.createElement("h3", null, project.title), /*#__PURE__*/_react.default.createElement("img", {
+      src: projectPicture(project.title),
+      alt: project.title,
+      style: imgStyle,
+      className: "p-2"
+    }), /*#__PURE__*/_react.default.createElement("p", {
+      className: "text-left"
+    }, project.description), /*#__PURE__*/_react.default.createElement("a", {
       href: project.link
     }, "Project Source"));
   });
@@ -29803,15 +29857,33 @@ function Projects() {
   console.log(proj);
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "projects",
-    className: "projects p-3 text-center"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "container container-sm p-5 text-center",
+    className: "projects p-3"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "container-sm p-5",
     style: projContainer
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "text-center border-bottom border-dark pb-2"
+  }, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container overflow-hidden"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "row"
-  }, proj)));
+  }, proj))));
 }
-},{"react":"node_modules/react/index.js","../Assets/currProjects.json":"Assets/currProjects.json"}],"Components/Experience.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Assets/currProjects.json":"Assets/currProjects.json","../Assets/projectBanner/PIONEERHUB.PNG":"Assets/projectBanner/PIONEERHUB.PNG","../Assets/projectBanner/DBALLIO.PNG":"Assets/projectBanner/DBALLIO.PNG","../Assets/projectBanner/CLONESTAGRAM.PNG":"Assets/projectBanner/CLONESTAGRAM.PNG"}],"Assets/currExperience.json":[function(require,module,exports) {
+module.exports = [{
+  "company": "IRESURRECT REPAIRS",
+  "title": "ELECTRONIC DIAGNOSTIC & REPAIR TECHNICIAN",
+  "location": "Berkeley, CA",
+  "date": "Feb 2018 – Jul 2019",
+  "tasks": ["Diagnose issues related to software and hardware", "Provide time and cost estimates on services", "repair systems by installing, configuring and troubleshooting various applications", "Research and assign appropriate market value for repaired electronics, salvaged parts and other inventory.", "Communicate with clients and come up with creative solutions that serves to their specific needs."]
+}, {
+  "company": "K2TOG",
+  "title": "FRONTEND DEVELOPMENT INTERN",
+  "location": "Berkeley, CA",
+  "date": "Feb 2013 – Jun 2013",
+  "tasks": ["Learn and apply foundational HTML, CSS and Javascript concepts", "write supporting code for websites"]
+}];
+},{}],"Components/Experience.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29821,24 +29893,43 @@ exports.default = Experience;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _currExperience = _interopRequireDefault(require("../Assets/currExperience.json"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Experience() {
+  function getJobDesc(descList) {
+    return descList.map();
+  }
+
+  var exp = _currExperience.default.map(function (job, idx) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: idx % 2 == 0 ? "col-sm animate__animated animate__fadeInLeft animate__faster" : "col-sm  animate__animated animate__fadeInRight animate__faster",
+      key: job.title + idx
+    }, /*#__PURE__*/_react.default.createElement("h3", null, job.company, " - ", job.title), /*#__PURE__*/_react.default.createElement("ul", null, job.tasks.map(function (task, idx) {
+      return /*#__PURE__*/_react.default.createElement("li", {
+        key: task + idx
+      }, task);
+    })));
+  });
+
   var expContainer = {
     backgroundColor: "rgb(165, 165, 165)",
     borderRadius: "5px"
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "skillsAndExperience",
-    className: "skillsAndExperience p-3 text-center"
+    className: "skillsAndExperience p-3"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "container container-sm p-5 text-center bg-light",
+    className: "container container-sm p-5 bg-light",
     style: expContainer
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "text-center border-bottom border-dark pb-2 animate__animated animate__bounce"
+  }, "Relevant Experience"), /*#__PURE__*/_react.default.createElement("div", {
     className: "row"
-  }, "Experience")));
+  }, exp)));
 }
-},{"react":"node_modules/react/index.js"}],"Assets/arrow-up.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Assets/currExperience.json":"Assets/currExperience.json"}],"Assets/arrow-up.svg":[function(require,module,exports) {
 module.exports = "/arrow-up.11cefa54.svg";
 },{}],"Components/ScrollToTopBtn.jsx":[function(require,module,exports) {
 "use strict";
@@ -29907,7 +29998,13 @@ function ScrollToTopBtn() {
     src: UpArrow
   }));
 }
-},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg"}],"Components/Body.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Assets/arrow-up.svg":"Assets/arrow-up.svg"}],"Assets/iconGithub.svg":[function(require,module,exports) {
+module.exports = "/iconGithub.e4edd5c6.svg";
+},{}],"Assets/iconLinkedin.svg":[function(require,module,exports) {
+module.exports = "/iconLinkedin.17401c12.svg";
+},{}],"Assets/iconGmail.svg":[function(require,module,exports) {
+module.exports = "/iconGmail.d52efa36.svg";
+},{}],"Components/Body.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29925,23 +30022,56 @@ var _Experience = _interopRequireDefault(require("./Experience"));
 
 var _ScrollToTopBtn = _interopRequireDefault(require("./ScrollToTopBtn"));
 
+var _iconGithub = _interopRequireDefault(require("../Assets/iconGithub.svg"));
+
+var _iconLinkedin = _interopRequireDefault(require("../Assets/iconLinkedin.svg"));
+
+var _iconGmail = _interopRequireDefault(require("../Assets/iconGmail.svg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function BodyComp(props) {
+  var iconStyle = {
+    height: window.innerWidth < 450 ? "50px" : "100px",
+    width: window.innerWidth < 450 ? "50px" : "100px"
+  };
+  console.log(window.innerWidth);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "bodyComp"
-  }, /*#__PURE__*/_react.default.createElement(_About.default, null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement(_Experience.default, null), /*#__PURE__*/_react.default.createElement("div", {
-    id: "education",
-    className: "education"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Education")), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_About.default, null), /*#__PURE__*/_react.default.createElement(_Experience.default, null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement("div", {
     id: "contact",
-    className: "contact"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Say hello!")), /*#__PURE__*/_react.default.createElement(_ScrollToTopBtn.default, null));
+    className: "container container-sm p-5"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "grid"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "row align-items-center text-center"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "col",
+    href: "https://www.linkedin.com/in/pdinu/"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _iconLinkedin.default,
+    alt: "Linkedin",
+    style: iconStyle
+  })), /*#__PURE__*/_react.default.createElement("a", {
+    className: "col",
+    href: "https://github.com/medinu"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _iconGithub.default,
+    alt: "Github",
+    style: iconStyle
+  })), /*#__PURE__*/_react.default.createElement("a", {
+    className: "col",
+    href: "mailto:medinu95@gmail.com"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _iconGmail.default,
+    alt: "Email",
+    style: iconStyle
+  }))))), /*#__PURE__*/_react.default.createElement(_ScrollToTopBtn.default, null));
 }
 
 var _default = BodyComp;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./About":"Components/About.jsx","./Projects":"Components/Projects.jsx","./Experience":"Components/Experience.jsx","./ScrollToTopBtn":"Components/ScrollToTopBtn.jsx"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./About":"Components/About.jsx","./Projects":"Components/Projects.jsx","./Experience":"Components/Experience.jsx","./ScrollToTopBtn":"Components/ScrollToTopBtn.jsx","../Assets/iconGithub.svg":"Assets/iconGithub.svg","../Assets/iconLinkedin.svg":"Assets/iconLinkedin.svg","../Assets/iconGmail.svg":"Assets/iconGmail.svg"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30026,7 +30156,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51487" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49704" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,7 +1,13 @@
 import React from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import currProjects from '../Assets/currProjects.json';
 
 function Nav(props){
+    let projs = currProjects.map((project, idx)=>{
+        return <a key={project+idx}href={"#"+project.title} className="dropdown-item">{project.title}</a>
+    })
+
+
     return (
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
 
@@ -22,14 +28,8 @@ function Nav(props){
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" data-toggle="dropdown">Projects</a>
                         <div className="dropdown-menu display">
-                            <a href="#projects" className="dropdown-item">Project1</a>
-                            <a href="#projects" className="dropdown-item">Project2</a>
-                            <a href="#projects" className="dropdown-item">Project3</a>
+                            {projs}
                         </div>
-                    </li>
-
-                    <li className="nav-item">
-                        <a href="#Education" className="nav-link">Education</a>
                     </li>
 
                     <li className="nav-item">
@@ -37,7 +37,7 @@ function Nav(props){
                     </li>
                     
                     <li className="nav-item">
-                        <a href="#Contact" className="nav-link">Contact</a>
+                        <a href="#contact" className="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,26 @@
+[
+    {
+        "company": "IRESURRECT REPAIRS",
+        "title": "ELECTRONIC DIAGNOSTIC & REPAIR TECHNICIAN", 
+        "location": "Berkeley, CA", 
+        "date": "Feb 2018 – Jul 2019",
+        "tasks": [
+            "Diagnose issues related to software and hardware" , 
+            "Provide time and cost estimates on services", 
+            "repair systems by installing, configuring and troubleshooting various applications",
+            "Research and assign appropriate market value for repaired electronics, salvaged parts and other inventory.", 
+            "Communicate with clients and come up with creative solutions that serves to their specific needs."
+        ]
+    },{
+        "company": "K2TOG",
+        "title": "FRONTEND DEVELOPMENT INTERN", 
+        "location": "Berkeley, CA", 
+        "date": "Feb 2013 – Jun 2013",
+        "tasks": [
+            "Learn and apply foundational HTML, CSS and Javascript concepts" , 
+            "write supporting code for websites"
+        ]
+    }
+    
+
+]
