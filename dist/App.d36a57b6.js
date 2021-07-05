@@ -29656,6 +29656,8 @@ module.exports = [{
   "link": "https://github.com/medinu/clonestagram",
   "stack": ["JAVA", "ANDROID STUDIO", "BACK4APP (DATABASE)"]
 }];
+},{}],"Assets/dp.svg":[function(require,module,exports) {
+module.exports = "/dp.2df7d762.svg";
 },{}],"Components/Nav.js":[function(require,module,exports) {
 "use strict";
 
@@ -29672,7 +29674,13 @@ var _currProjects = _interopRequireDefault(require("../Assets/currProjects.json"
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var dpLogo = require('../Assets/dp.svg');
+
 function Nav(props) {
+  var logoStyle = {
+    height: "85px"
+  };
+
   var projs = _currProjects.default.map(function (project, idx) {
     return /*#__PURE__*/_react.default.createElement("a", {
       key: project + idx,
@@ -29683,10 +29691,13 @@ function Nav(props) {
 
   return /*#__PURE__*/_react.default.createElement("nav", {
     className: "navbar navbar-expand-sm bg-dark navbar-dark"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     href: "#",
-    className: "navbar-brand"
-  }, "LOGO"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "navbar-brand",
+    src: dpLogo,
+    alt: "Logo",
+    style: logoStyle
+  }), /*#__PURE__*/_react.default.createElement("button", {
     className: "navbar-toggler",
     type: "button",
     "data-toggle": "collapse",
@@ -29725,7 +29736,7 @@ function Nav(props) {
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","../Assets/currProjects.json":"Assets/currProjects.json"}],"Assets/gradPic.jpg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../node_modules/bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","../Assets/currProjects.json":"Assets/currProjects.json","../Assets/dp.svg":"Assets/dp.svg"}],"Assets/gradPic.jpg":[function(require,module,exports) {
 module.exports = "/gradPic.7bc4d45c.jpg";
 },{}],"Assets/iconGradCap.svg":[function(require,module,exports) {
 module.exports = "/iconGradCap.f1c2a75d.svg";
@@ -30156,7 +30167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49704" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49251" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,8 +1,13 @@
 import React from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import currProjects from '../Assets/currProjects.json';
+const dpLogo = require('../Assets/dp.svg');
 
 function Nav(props){
+    const logoStyle = {
+        height: "85px"
+    }
+
     let projs = currProjects.map((project, idx)=>{
         return <a key={project+idx}href={"#"+project.title} className="dropdown-item">{project.title}</a>
     })
@@ -11,7 +16,7 @@ function Nav(props){
     return (
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
 
-            <a href="#" className="navbar-brand">LOGO</a>
+            <img href="#" className="navbar-brand" src={dpLogo} alt="Logo" style={logoStyle}/>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span className="navbar-toggler-icon"></span>
