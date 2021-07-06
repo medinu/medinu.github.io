@@ -5,8 +5,8 @@ export default function About() {
     const imgStyle = {
         borderRadius:"50%",
         boxShadow: "0px 0px 3px",
-        height: "250px",
-        width: "250px"
+        height: (window.innerWidth < 450)? window.innerWidth/2 : "250px",
+        width: (window.innerWidth < 450)? window.innerWidth/2 : "250px"
     }
 
     const abtContainer = {

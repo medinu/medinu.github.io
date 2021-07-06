@@ -25,7 +25,7 @@ function BodyComp(props){
             
             <Projects/>
 
-            <div id="contact" className="container container-sm p-5">
+            <div id="contact" className="container container-sm p-4">
                 <div className="grid">
                     <div className="row align-items-center text-center">
                             <a className="col" href="https://www.linkedin.com/in/pdinu/"><img src={iconLinkedin} alt="Linkedin" style={iconStyle}/></a>

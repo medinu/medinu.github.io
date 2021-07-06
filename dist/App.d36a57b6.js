@@ -29647,12 +29647,12 @@ module.exports = [{
   "stack": ["ANDROID STUDIO", "JAVA", "FIGMA", "BACK4APP(DATABASE)", "GITHUB PROJECTS", "AGILE"]
 }, {
   "title": "DBALL.IO",
-  "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to servewebpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
+  "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to serve webpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
   "link": "https://github.com/medinu/express_",
   "stack": ["EXPRESSJS", "BOOTSTRAP", "JAVASCRIPT", "MONGODB", "BCRYPTJS", "HTML, CSS & JAVASCRIPT"]
 }, {
   "title": "CLONESTAGRAM",
-  "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend.",
+  "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend. It makes uses of Parses' authentication as well as session management.",
   "link": "https://github.com/medinu/clonestagram",
   "stack": ["JAVA", "ANDROID STUDIO", "BACK4APP (DATABASE)"]
 }];
@@ -29763,8 +29763,8 @@ function About() {
   var imgStyle = {
     borderRadius: "50%",
     boxShadow: "0px 0px 3px",
-    height: "250px",
-    width: "250px"
+    height: window.innerWidth < 450 ? window.innerWidth / 2 : "250px",
+    width: window.innerWidth < 450 ? window.innerWidth / 2 : "250px"
   };
   var abtContainer = {
     borderRadius: "5px"
@@ -29827,8 +29827,8 @@ function Projects() {
     borderRadius: "5px"
   };
   var imgStyle = {
-    height: window.innerWidth < 450 ? window.innerWidth / 4 : window.innerWidth / 2,
-    width: window.innerWidth < 450 ? window.innerWidth / 4 : window.innerWidth / 2,
+    height: window.innerWidth < 450 ? window.innerWidth / 3 : window.innerWidth / 6,
+    width: window.innerWidth < 450 ? window.innerWidth / 3 : window.innerWidth / 6,
     padding: "0px"
   };
 
@@ -29863,7 +29863,7 @@ function Projects() {
       className: "p-2"
     }), /*#__PURE__*/_react.default.createElement("p", {
       className: "text-left"
-    }, /*#__PURE__*/_react.default.createElement("details", null, /*#__PURE__*/_react.default.createElement("summary", null, project.description.slice(0, project.description.indexOf(".") + 1)), /*#__PURE__*/_react.default.createElement("p", null, project.description))), /*#__PURE__*/_react.default.createElement("a", {
+    }, /*#__PURE__*/_react.default.createElement("details", null, /*#__PURE__*/_react.default.createElement("summary", null, project.description.slice(0, project.description.indexOf(".") + 1)), /*#__PURE__*/_react.default.createElement("p", null, project.description.slice(project.description.indexOf(".") + 1)))), /*#__PURE__*/_react.default.createElement("a", {
       href: project.link,
       className: "btn btn-outline-secondary"
     }, "Project Source"));
@@ -30055,7 +30055,7 @@ function BodyComp(props) {
     className: "bodyComp"
   }, /*#__PURE__*/_react.default.createElement(_About.default, null), /*#__PURE__*/_react.default.createElement(_Experience.default, null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement("div", {
     id: "contact",
-    className: "container container-sm p-5"
+    className: "container container-sm p-4"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "grid"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -30171,7 +30171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59847" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60374" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -17,6 +17,11 @@
 
 
 .contact{
-    min-height: 200px;
     background-color: whitesmoke;
+}
+
+footer{
+    font-weight: 100;
+    text-align: center;
+padding-bottom: 25px;
 }

@@ -16,8 +16,8 @@ export default function Projects() {
     }
 
     const imgStyle = {
-        height: (window.innerWidth < 450 )? window.innerWidth /4 : window.innerWidth /2, 
-        width: (window.innerWidth < 450 )? window.innerWidth /4 : window.innerWidth /2,
+        height: (window.innerWidth < 450 )? window.innerWidth /3 : window.innerWidth /6, 
+        width: (window.innerWidth < 450 )? window.innerWidth /3 : window.innerWidth /6,
         padding: "0px"
     }
 
@@ -44,7 +44,7 @@ export default function Projects() {
                             <p className="text-left">
                                 <details>
                                     <summary>{project.description.slice(0,project.description.indexOf(".")+1)}</summary>
-                                    <p>{project.description}</p>
+                                    <p>{project.description.slice(project.description.indexOf(".")+1)}</p>
                                 </details>
                                 {/* {project.description} */}
                             </p>

@@ -7,13 +7,13 @@
     },
     {
         "title":  "DBALL.IO",
-        "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to servewebpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
+        "description": "BootStrap project to test and implement a loging in and register feature. dBall uses expressJs to serve webpages that are rendered serverside using handlebars templating engine. dBall also makes use of Mongodb to store user info, including secure hashed password that is used to authenticate each user.",
         "link": "https://github.com/medinu/express_",
         "stack": ["EXPRESSJS", "BOOTSTRAP", "JAVASCRIPT", "MONGODB", "BCRYPTJS", "HTML, CSS & JAVASCRIPT"]
     },
     {
         "title":  "CLONESTAGRAM",
-        "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend.",
+        "description": "clonestagram is a photo sharing app similar to Instagram but using Parse as its backend. It makes uses of Parses' authentication as well as session management.",
         "link": "https://github.com/medinu/clonestagram",
         "stack": ["JAVA", "ANDROID STUDIO", "BACK4APP (DATABASE)"]
     }
