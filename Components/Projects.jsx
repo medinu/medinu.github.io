@@ -38,17 +38,18 @@ export default function Projects() {
 
     let proj = currProjects.map((project, index)=>{
                 return (
-                        <div key={project+index} id={project.title} className="col-md p-5 mb-3 text-center" style={projectCardStyle}>
-                            <h3 >{project.title}</h3>
-                            <img src={projectPicture(project.title)} alt={project.title} style={imgStyle} className="p-2"/>
-                            <p className="text-left">
-                                <details>
-                                    <summary>{project.description.slice(0,project.description.indexOf(".")+1)}</summary>
-                                    <p>{project.description.slice(project.description.indexOf(".")+1)}</p>
-                                </details>
-                                {/* {project.description} */}
-                            </p>
-                            <a href={project.link} className="btn btn-outline-secondary">Project Source</a>
+                        <div key={project+index} id={project.title} className="col p-3 m-1 text-center" style={projectCardStyle}>
+                                <h4 >{project.title}</h4>
+                                <img src={projectPicture(project.title)} alt={project.title} style={imgStyle} className="p-2"/>
+                                <p className="text-left">
+                                    <details>
+                                        <summary>{project.description.slice(0,project.description.indexOf(".")+1)}</summary>
+                                        <p>{project.description.slice(project.description.indexOf(".")+1)}</p>
+                                    </details>
+                                    {/* {project.description} */}
+                                </p>
+                                
+                                <a href={project.link} className="btn btn-outline-secondary">Project Source</a>
                         </div>)
                 })
 
@@ -57,11 +58,11 @@ export default function Projects() {
 
     return (
         <div id="projects" className="projects p-3" >
-            <div className="container-sm p-5" style={projContainer}>
+            <div className="container p-5" style={projContainer}>
                 <h1 className="text-center border-bottom border-dark pb-2">Projects</h1>
                 
                 <div className="container overflow-hidden">
-                    <div className="row">
+                    <div className="row justify-content-between">
                         {proj}
                     </div>
                     

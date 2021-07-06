@@ -29854,9 +29854,9 @@ function Projects() {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: project + index,
       id: project.title,
-      className: "col-md p-5 mb-3 text-center",
+      className: "col p-3 m-1 text-center",
       style: projectCardStyle
-    }, /*#__PURE__*/_react.default.createElement("h3", null, project.title), /*#__PURE__*/_react.default.createElement("img", {
+    }, /*#__PURE__*/_react.default.createElement("h4", null, project.title), /*#__PURE__*/_react.default.createElement("img", {
       src: projectPicture(project.title),
       alt: project.title,
       style: imgStyle,
@@ -29875,14 +29875,14 @@ function Projects() {
     id: "projects",
     className: "projects p-3"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "container-sm p-5",
+    className: "container p-5",
     style: projContainer
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-center border-bottom border-dark pb-2"
   }, "Projects"), /*#__PURE__*/_react.default.createElement("div", {
     className: "container overflow-hidden"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "row"
+    className: "row justify-content-between"
   }, proj))));
 }
 },{"react":"node_modules/react/index.js","../Assets/currProjects.json":"Assets/currProjects.json","../Assets/projectBanner/PIONEERHUB.PNG":"Assets/projectBanner/PIONEERHUB.PNG","../Assets/projectBanner/DBALLIO.PNG":"Assets/projectBanner/DBALLIO.PNG","../Assets/projectBanner/CLONESTAGRAM.PNG":"Assets/projectBanner/CLONESTAGRAM.PNG"}],"Assets/currExperience.json":[function(require,module,exports) {
@@ -30171,7 +30171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60374" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60803" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
