@@ -15,9 +15,6 @@ function BodyComp(props){
         height: (window.innerWidth < 450 )? "50px" : "100px",
         width: (window.innerWidth < 450 )? "50px" : "100px"
     }
-
-    console.log(window.innerWidth);
-
     
     return (
         <div className="bodyComp">

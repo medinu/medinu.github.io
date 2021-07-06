@@ -29566,7 +29566,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -29598,7 +29598,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -29633,13 +29633,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/bundle-url.js"}],"node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"Assets/currProjects.json":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Assets/currProjects.json":[function(require,module,exports) {
 module.exports = [{
   "title": "PIONEERHUB",
   "description": "PioneerHub is a social platform that connects the CSUEB community together. PioneerHub is your go-to forreaching out to not only your classmates but also your department peers. Features include feed that displaysstudent post, a hub that gathers different resouces on campus on one screen, displaying and editing usersprofile, and a simple map that drops down locations of the buildings on campus.",
@@ -29678,7 +29678,8 @@ var dpLogo = require('../Assets/dp.svg');
 
 function Nav(props) {
   var logoStyle = {
-    height: "85px"
+    height: "85px",
+    margin: "-20px"
   };
 
   var projs = _currProjects.default.map(function (project, idx) {
@@ -29691,13 +29692,15 @@ function Nav(props) {
 
   return /*#__PURE__*/_react.default.createElement("nav", {
     className: "navbar navbar-expand-sm bg-dark navbar-dark"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "navbar-brand"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    href: "#",
-    className: "navbar-brand",
     src: dpLogo,
     alt: "Logo",
     style: logoStyle
-  }), /*#__PURE__*/_react.default.createElement("button", {
+  }))), /*#__PURE__*/_react.default.createElement("button", {
     className: "navbar-toggler",
     type: "button",
     "data-toggle": "collapse",
@@ -29824,8 +29827,9 @@ function Projects() {
     borderRadius: "5px"
   };
   var imgStyle = {
-    height: "200px",
-    width: "250px"
+    height: window.innerWidth < 450 ? window.innerWidth / 4 : window.innerWidth / 2,
+    width: window.innerWidth < 450 ? window.innerWidth / 4 : window.innerWidth / 2,
+    padding: "0px"
   };
 
   function projectPicture(title) {
@@ -29859,8 +29863,9 @@ function Projects() {
       className: "p-2"
     }), /*#__PURE__*/_react.default.createElement("p", {
       className: "text-left"
-    }, project.description), /*#__PURE__*/_react.default.createElement("a", {
-      href: project.link
+    }, /*#__PURE__*/_react.default.createElement("details", null, /*#__PURE__*/_react.default.createElement("summary", null, project.description.slice(0, project.description.indexOf(".") + 1)), /*#__PURE__*/_react.default.createElement("p", null, project.description))), /*#__PURE__*/_react.default.createElement("a", {
+      href: project.link,
+      className: "btn btn-outline-secondary"
     }, "Project Source"));
   });
 
@@ -30046,7 +30051,6 @@ function BodyComp(props) {
     height: window.innerWidth < 450 ? "50px" : "100px",
     width: window.innerWidth < 450 ? "50px" : "100px"
   };
-  console.log(window.innerWidth);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "bodyComp"
   }, /*#__PURE__*/_react.default.createElement(_About.default, null), /*#__PURE__*/_react.default.createElement(_Experience.default, null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement("div", {
@@ -30139,7 +30143,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/Nav":"Components/Nav.js","./Components/Body":"Components/Body.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/Nav":"Components/Nav.js","./Components/Body":"Components/Body.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -30167,7 +30171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49251" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59847" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -30343,5 +30347,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","App.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","App.js"], null)
 //# sourceMappingURL=/App.d36a57b6.js.map

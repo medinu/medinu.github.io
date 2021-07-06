@@ -16,8 +16,9 @@ export default function Projects() {
     }
 
     const imgStyle = {
-        height: "200px", 
-        width: "250px"
+        height: (window.innerWidth < 450 )? window.innerWidth /4 : window.innerWidth /2, 
+        width: (window.innerWidth < 450 )? window.innerWidth /4 : window.innerWidth /2,
+        padding: "0px"
     }
 
     function projectPicture(title){
@@ -36,12 +37,18 @@ export default function Projects() {
     }
 
     let proj = currProjects.map((project, index)=>{
-                    return (
+                return (
                         <div key={project+index} id={project.title} className="col-md p-5 mb-3 text-center" style={projectCardStyle}>
                             <h3 >{project.title}</h3>
                             <img src={projectPicture(project.title)} alt={project.title} style={imgStyle} className="p-2"/>
-                            <p className="text-left">{project.description}</p>
-                            <a href={project.link} >Project Source</a>
+                            <p className="text-left">
+                                <details>
+                                    <summary>{project.description.slice(0,project.description.indexOf(".")+1)}</summary>
+                                    <p>{project.description}</p>
+                                </details>
+                                {/* {project.description} */}
+                            </p>
+                            <a href={project.link} className="btn btn-outline-secondary">Project Source</a>
                         </div>)
                 })
 

@@ -5,7 +5,8 @@ const dpLogo = require('../Assets/dp.svg');
 
 function Nav(props){
     const logoStyle = {
-        height: "85px"
+        height: "85px",
+        margin: "-20px"
     }
 
     let projs = currProjects.map((project, idx)=>{
@@ -16,7 +17,11 @@ function Nav(props){
     return (
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
 
-            <img href="#" className="navbar-brand" src={dpLogo} alt="Logo" style={logoStyle}/>
+            <span className="navbar-brand">
+                <a href="#">
+                    <img src={dpLogo} alt="Logo" style={logoStyle}/>
+                </a>
+            </span> 
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span className="navbar-toggler-icon"></span>
