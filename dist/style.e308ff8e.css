@@ -1,13 +1,13 @@
 .about{
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(35, 35, 35);
 }
 
 .projects{
-    background-color: white;
+    background-color: rgb(105, 105, 105);
 }
 
 .skillsAndExperience{
-    background-color: rgb(122, 122, 122);
+    background-color: rgb(70, 70, 70);
 }
 
 .education{
@@ -21,9 +21,12 @@
 }
 
 footer{
+    padding-top: 1rem;
+    font-size: large;
     font-weight: 100;
     text-align: center;
     padding-bottom: 25px;
+    background-color: rgb(140, 140, 140);;
 }
 
 .contactBtn:hover, .scrollToTopBtn:hover{

@@ -3,7 +3,7 @@ const UpArrow = require('../Assets/arrow-up.svg');
 
 export default function ScrollToTopBtn() {
     const UpArrowStyle = {
-        backgroundColor: "rgba(122, 122, 122, 0.25)",
+        backgroundColor: "rgba(264, 264, 264, 0.5)",
         position: "fixed",
         bottom: "25px",
         right: "25px",

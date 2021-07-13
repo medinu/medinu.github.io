@@ -28,7 +28,7 @@ function BodyComp(props){
             <ScrollToTopBtn/>
 
             <footer>
-                © 2021 Dinesh Pandey
+                <a>© 2021 Dinesh Pandey</a> 
                 <div id="contact" className="container-fluid p-4">
                     <div className="grid">
                         <div className="row justify-content-around text-center">
