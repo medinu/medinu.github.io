@@ -44376,8 +44376,7 @@ function About() {
     style: {
       "position": "fixed",
       "z-index": "0",
-      "left": "0px",
-      "top": "0"
+      "left": "0px"
     },
     params: {
       "particles": {
@@ -44838,7 +44837,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57681" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57776" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

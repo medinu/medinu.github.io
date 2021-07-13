@@ -18,7 +18,7 @@ export default function About() {
 
     return (
         <div id="about" className="about p-5" style={{"position": "relative"}}>
-            <Particles style={{"position": "fixed", "z-index": "0", "left": "0px", "top": "0"}} 
+            <Particles style={{"position": "fixed", "z-index": "0", "left": "0px"}} 
                     params={{
                         "particles": {
                             "number": {
