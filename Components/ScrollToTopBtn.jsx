@@ -51,7 +51,7 @@ export default function ScrollToTopBtn() {
 
     return (
         <a id="scrollToTop" style={UpArrowStyle} onClick={scrollToTopLogic}>
-            <img style={ArrowImgStyle} src={UpArrow}/>
+            <img className="scrollToTopBtn" style={ArrowImgStyle} src={UpArrow}/>
         </a>
     )
 }

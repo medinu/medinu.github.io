@@ -26,4 +26,12 @@ footer{
     padding-bottom: 25px;
 }
 
+.contactBtn:hover, .scrollToTopBtn:hover{
+    transform: scale(1.2);
+}
+
+.logoTitle{
+    text-decoration: none;
+}
+
 /*# sourceMappingURL=/style.e308ff8e.css.map */

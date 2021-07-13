@@ -12,8 +12,8 @@ import iconGmail from '../Assets/iconGmail.svg';
 function BodyComp(props){
 
     let iconStyle = {
-        height: (window.innerWidth < 450 )? "50px" : "100px",
-        width: (window.innerWidth < 450 )? "50px" : "100px"
+        height: "50px",
+        width: "50px"
     }
     
     return (
@@ -25,17 +25,21 @@ function BodyComp(props){
             
             <Projects/>
 
-            <div id="contact" className="container container-sm p-4">
-                <div className="grid">
-                    <div className="row align-items-center text-center">
-                            <a className="col" href="https://www.linkedin.com/in/pdinu/"><img src={iconLinkedin} alt="Linkedin" style={iconStyle}/></a>
-                            <a className="col" href="https://github.com/medinu"><img src={iconGithub} alt="Github" style={iconStyle}/></a>
-                            <a className="col" href="mailto:medinu95@gmail.com"><img src={iconGmail} alt="Email" style={iconStyle}/></a>
+            <ScrollToTopBtn/>
+
+            <footer>
+                © 2021 Dinesh Pandey
+                <div id="contact" className="container-fluid p-4">
+                    <div className="grid">
+                        <div className="row justify-content-around text-center">
+                                <a className="col-1" href="https://www.linkedin.com/in/pdinu/"><img className="contactBtn" src={iconLinkedin} alt="Linkedin" style={iconStyle}/></a>
+                                <a className="col-1" href="https://github.com/medinu"><img className="contactBtn" src={iconGithub} alt="Github" style={iconStyle}/></a>
+                                <a className="col-1" href="mailto:medinu95@gmail.com"><img className="contactBtn" src={iconGmail} alt="Email" style={iconStyle}/></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <ScrollToTopBtn/>
+            </footer>
 
         </div>
     )

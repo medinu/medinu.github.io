@@ -1,5 +1,5 @@
 import React from "react";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import currProjects from '../Assets/currProjects.json';
 const dpLogo = require('../Assets/dp.svg');
 
