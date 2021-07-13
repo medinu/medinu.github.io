@@ -44350,6 +44350,8 @@ var _reactParticlesJs = _interopRequireDefault(require("react-particles-js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var gradPic = require('../Assets/gradPic.jpg');
 
 var gradCap = require('../Assets/iconGradCap.svg');
@@ -44366,14 +44368,16 @@ function About() {
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "about",
-    className: "about p-3 ",
+    className: "about p-5",
     style: {
       "position": "relative"
     }
   }, /*#__PURE__*/_react.default.createElement(_reactParticlesJs.default, {
     style: {
       "position": "fixed",
-      "z-index": "0"
+      "z-index": "0",
+      "left": "0px",
+      "top": "0"
     },
     params: {
       "particles": {
@@ -44426,10 +44430,15 @@ function About() {
         }
       }
     }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "abtCont container-sm p-5 bg-light text-center",
+  }), /*#__PURE__*/_react.default.createElement("div", _defineProperty({
+    className: "abtCont container-sm p-5 bg-light text-center rounded",
     style: abtContainer
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, "style", {
+    "position": "relative",
+    "z-index": "0",
+    "start": "0",
+    "top": "0"
+  }), /*#__PURE__*/_react.default.createElement("img", {
     className: "container p-0 mb-3",
     style: imgStyle,
     src: gradPic,
@@ -44527,7 +44536,7 @@ function Projects() {
   console.log(proj);
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "projects",
-    className: "projects p-3"
+    className: "projects p-5"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "container p-5",
     style: projContainer
@@ -44589,7 +44598,7 @@ function Experience() {
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "skillsAndExperience",
-    className: "skillsAndExperience p-3"
+    className: "skillsAndExperience p-5"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "container container-sm p-5 bg-light",
     style: expContainer
@@ -44829,7 +44838,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63896" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57681" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

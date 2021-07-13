@@ -17,8 +17,8 @@ export default function About() {
     }
 
     return (
-        <div id="about" className="about p-3 " style={{"position": "relative"}}>
-            <Particles style={{"position": "fixed", "z-index": "0"}} 
+        <div id="about" className="about p-5" style={{"position": "relative"}}>
+            <Particles style={{"position": "fixed", "z-index": "0", "left": "0px", "top": "0"}} 
                     params={{
                         "particles": {
                             "number": {
@@ -72,7 +72,9 @@ export default function About() {
                     }}
                 />
 
-                <div className="abtCont container-sm p-5 bg-light text-center" style={abtContainer}>
+                <div className="abtCont container-sm p-5 bg-light text-center rounded" style={abtContainer}
+                    style={{"position": "relative", "z-index": "0", "start": "0", "top": "0"}}
+                >
                     <img className="container p-0 mb-3" style={imgStyle} src={gradPic} alt="My face"/>
                 
                     <h1 className="border-bottom border-top border-dark p-2 animate__animated animate__bounce">Hello, My name is Dinesh Pandey</h1><br/>

@@ -28,7 +28,7 @@ export default function Experience() {
 
 
     return (
-        <div id="skillsAndExperience" className="skillsAndExperience p-3">
+        <div id="skillsAndExperience" className="skillsAndExperience p-5">
             <div className="container container-sm p-5 bg-light" style={expContainer}>
                 <h1 className="text-center border-bottom border-dark pb-2 animate__animated animate__bounce">Relevant Experience</h1>
                 <div className="row">

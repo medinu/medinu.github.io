@@ -57,7 +57,7 @@ export default function Projects() {
     console.log(proj)
 
     return (
-        <div id="projects" className="projects p-3" >
+        <div id="projects" className="projects p-5" >
             <div className="container p-5" style={projContainer}>
                 <h1 className="text-center border-bottom border-dark pb-2">Projects</h1>
                 
