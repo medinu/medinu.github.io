@@ -29,9 +29,11 @@ function BodyComp(props){
             
             <ScrollToTopBtn/>
 
+            
+
             <footer>
                 <a>© 2021 Dinesh Pandey</a> 
-                <div id="contact" className="container-fluid p-4">
+                <div id="contact" className="container-fluid p-4 mx-auto">
                     <div className="grid">
                         <div className="row justify-content-around text-center">
                                 <a className="col-1" href="https://www.linkedin.com/in/pdinu/"><img className="contactBtn" src={iconLinkedin} alt="Linkedin" style={iconStyle}/></a>

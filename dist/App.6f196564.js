@@ -44635,7 +44635,7 @@ function ScrollToTopBtn() {
     backgroundColor: "rgba(264, 264, 264, 0.5)",
     position: "fixed",
     bottom: "25px",
-    right: "25px",
+    left: "25px",
     width: "50px",
     height: "50px",
     borderRadius: "50%",
@@ -44725,7 +44725,7 @@ function BodyComp(props) {
     className: "bodyComp"
   }, /*#__PURE__*/_react.default.createElement(_About.default, null), /*#__PURE__*/_react.default.createElement(_Experience.default, null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement(_ScrollToTopBtn.default, null), /*#__PURE__*/_react.default.createElement("footer", null, /*#__PURE__*/_react.default.createElement("a", null, "\xA9 2021 Dinesh Pandey"), /*#__PURE__*/_react.default.createElement("div", {
     id: "contact",
-    className: "container-fluid p-4"
+    className: "container-fluid p-4 mx-auto"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "grid"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -44844,7 +44844,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61759" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54142" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

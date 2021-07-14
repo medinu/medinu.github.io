@@ -6,7 +6,7 @@ export default function ScrollToTopBtn() {
         backgroundColor: "rgba(264, 264, 264, 0.5)",
         position: "fixed",
         bottom: "25px",
-        right: "25px",
+        left: "25px",
         width: "50px",
         height: "50px",
         borderRadius: "50%",
