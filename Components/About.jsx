@@ -2,6 +2,8 @@ import React from 'react';
 const gradPic = require('../Assets/gradPic.jpg');
 const gradCap = require('../Assets/iconGradCap.svg');
 
+import resume from '../Assets/DineshResume.pdf';
+
 import Particles from 'react-particles-js';
 
 export default function About() {
@@ -88,6 +90,8 @@ export default function About() {
                         <q>The only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle.</q>
                         – Steve Jobs
                     </p>
+
+                    <a href={resume} className="btn btn-outline-secondary px-5 mt-4">Resume</a>
                 </div>
         </div>
             

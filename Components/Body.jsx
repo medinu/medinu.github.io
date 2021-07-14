@@ -9,6 +9,8 @@ import iconLinkedin from '../Assets/iconLinkedin.svg';
 import iconGmail from '../Assets/iconGmail.svg';
 
 
+
+
 function BodyComp(props){
 
     let iconStyle = {
@@ -18,13 +20,13 @@ function BodyComp(props){
     
     return (
         <div className="bodyComp">
-            
             <About/>
 
             <Experience/>
             
             <Projects/>
 
+            
             <ScrollToTopBtn/>
 
             <footer>
