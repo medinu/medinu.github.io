@@ -1,0 +1,40 @@
+.about{
+    background-color: rgb(35, 35, 35);
+}
+
+.projects{
+    background-color: rgb(105, 105, 105);
+}
+
+.skillsAndExperience{
+    background-color: rgb(70, 70, 70);
+}
+
+.education{
+    min-height: 200px;
+    background-color: silver;
+}
+
+
+.contact{
+    background-color: whitesmoke;
+}
+
+footer{
+    padding-top: 1rem;
+    font-size: large;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 75px;
+    background-color: rgb(140, 140, 140);;
+}
+
+.contactBtn:hover, .scrollToTopBtn:hover{
+    transform: scale(1.2);
+}
+
+.logoTitle{
+    text-decoration: none;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
